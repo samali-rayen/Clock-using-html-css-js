@@ -1,18 +1,88 @@
+@font-face{
+    font-family:'digital-clock-font';
+    src: url('put_the_location_to_your_font.ttf or .otf');
+}
 *{
     box-sizing: border-box;
     margin: 0;
     
 }
 body{
-    background-color: rgb(10, 10, 55);
+    background: linear-gradient(109.6deg, rgb(36, 45, 57) 11.2%, rgb(16, 37, 60) 51.2%, rgb(0, 0, 0) 98.6%);
+    font-family: 'Changa', sans-serif;
+    background-repeat: no-repeat;
+    min-height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
 }
+.time-el{
+    background-color: rgb(2, 17, 30);
+    width: 700px;
+    height: 200px;  
+    border-radius: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    -webkit-border-radius: 30px;
+    -moz-border-radius: 30px;
+    -ms-border-radius: 30px;
+    -o-border-radius: 30px;
+    position:absolute;
+}
 .container{
-    background-color: rgba(240, 248, 255, 0.246);
-    width: 1200px;
-    height: 300px;
-    margin-right: 300px;
-
+    background: #020024;
+    background:  linear-gradient(155deg, #f44336, #ff9800, #ffeb3b, #4caf50, #2196f3, #9c27b0, #9c27b0,#2196f3, #4caf50,#ffeb3b, #ff9800,#f44336);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 710px;
+    height: 210px;
+    border-radius: 30px;
+    position: relative;
+    animation: gradient 5s linear infinite;
+    -webkit-animation: gradient 5s linear infinite;
+}
+ 
+.container::before{
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    -webkit-transform: translate(-50%,-50%);
+    -moz-transform: translate(-50%,-50%);
+    -ms-transform: translate(-50%,-50%);
+    -o-transform: translate(-50%,-50%);
+    width: 100%;
+    height: 100%;
+    background: inherit;
+    position: absolute;
+    filter:blur(10px);
+    -webkit-filter:blur(10px);
+    border-radius: 30px;
+    -webkit-border-radius: 30px;
+    -moz-border-radius: 30px;
+    -ms-border-radius: 30px;
+    -o-border-radius: 30px;
+}
+.hours-el::after,.minutes-el::after{
+    content: ":";
+}
+@keyframes gradient {
+    0% {
+        background-position: 710px 0px;
+    }
+    25% {
+        background-position: 1420px 0px;
+    }
+    50% {
+        background-position:2130px 0px;
+    }
+    75%{
+        background-position: 2840px 0px;
+    }
+    100%{
+        background-position:3550px 0px ;
+    }
 }
