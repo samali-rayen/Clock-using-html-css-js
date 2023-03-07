@@ -69,6 +69,11 @@ body{
 .hours-el::after,.minutes-el::after{
     content: ":";
 }
+.hours-el,.minutes-el,.seconds-el{
+    font-size: 100px;
+    color: antiquewhite;
+    text-shadow: 1px 1px 5px whitesmoke;
+}
 @keyframes gradient {
     0% {
         background-position: 710px 0px;
