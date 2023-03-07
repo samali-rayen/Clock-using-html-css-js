@@ -10,8 +10,21 @@ function updateClock(){
     const minuteHand=document.querySelector(".minutes-el")
     const secondsHand=document.querySelector(".seconds-el")
 
-    hourHand.innerHTML=hours
-    minuteHand.innerHTML=minutes
-    secondsHand.innerHTML=seconds
+    
+    if(hours===0){
+        hourHand.innerHTML=00
+    }else{
+        hourHand.innerHTML=hours
+    }
+    if(minutes===0){
+        minuteHand.innerHTML=00
+    }else{
+        minuteHand.innerHTML=minutes
+    }
+    if(seconds===0){
+        secondsHand.innerHTML=00
+    }else{
+        secondsHand.innerHTML=seconds
+    }
 }
 setInterval(updateClock, 1000)
